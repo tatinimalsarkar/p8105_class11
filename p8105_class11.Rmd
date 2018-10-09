@@ -1,0 +1,21 @@
+---
+title: "p8105_class11"
+author: "Tatini Mal-Sarkar"
+date: "10/9/2018"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+```{r}
+library(p8105.datasets)
+data(nyc_airbnb) 
+nyc_airbnb %>% 
+  group_by(neighbourhood) %>% 
+  ggplot(aes(x = neighbourhood, y = price)) +
+  geom_point()
+```
+
